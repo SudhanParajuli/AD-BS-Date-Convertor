@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Date Converter</title>
 </head>
 <body>
     <select id="conversionType" onchange="toggleConversionSection()">
@@ -10,13 +13,13 @@
         <option value="ADtoBS">Convert AD to BS</option>
     </select>
 
-    <!-- BS to AD ko lagi -->
-    <div class="conversion-section" id="bsToADSection">
+    <!-- BS to AD Section -->
+    <div class="conversion-section" id="bsToADSection" style="display: none;">
         <h2>Convert BS to AD</h2>
-        <select id="bsYear">
-            <option value="">Select BS Year</option>
-        </select>
-          </select>
+        <label for="bsYear">Year:</label>
+        <select id="bsYear"></select>
+        
+        <label for="bsMonth">Month:</label>
         <select id="bsMonth">
             <option value="">Select Month</option>
             <option value="1">Baishak</option>
@@ -32,18 +35,20 @@
             <option value="11">Falgun</option>
             <option value="12">Chaitra</option>
         </select>
+        
         <input type="number" id="bsDay" placeholder="BS Day" />
         <button onclick="convertBSToAD()">Convert BS to AD</button>
         <div class="result1" id="result1"></div>
         <div class="error1" id="error1"></div>
     </div>
 
-    <!-- AD to BS ko lagi-->
-    <div class="conversion-section" id="adToBSSection">
+    <!-- AD to BS Section -->
+    <div class="conversion-section" id="adToBSSection" style="display: none;">
         <h2>Convert AD to BS</h2>
-        <select id="adYear">
-            <option value="">Select AD Year</option>
-        </select>
+        <label for="adYear">Year:</label>
+        <select id="adYear"></select>
+        
+        <label for="adMonth">Month:</label>
         <select id="adMonth">
             <option value="">Select Month</option>
             <option value="1">January</option>
@@ -59,11 +64,14 @@
             <option value="11">November</option>
             <option value="12">December</option>
         </select>
+        
         <input type="number" id="adDay" placeholder="AD Day" />
         <button onclick="convertADToBS()">Convert AD to BS</button>
         <div class="result2" id="result2"></div>
         <div class="error2" id="error2"></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
-        <script src="script.js"></script>
 </html>
+
