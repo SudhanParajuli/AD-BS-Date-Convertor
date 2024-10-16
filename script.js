@@ -1,4 +1,3 @@
-// Populate the year dropdowns dynamically
 for (let year = 1971; year <= 2100; year++) {
     document.getElementById('bsYear').innerHTML += `<option value="${year}">${year} BS</option>`;
 }
@@ -20,7 +19,6 @@ function toggleConversionSection() {
     const bsToADSection = document.getElementById('bsToADSection');
     const adToBSSection = document.getElementById('adToBSSection');
 
-    // Toggle the sections based on selected conversion type
     if (conversionType === 'BStoAD') {
         bsToADSection.style.display = 'block';
         adToBSSection.style.display = 'none';
