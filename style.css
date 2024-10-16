@@ -1,0 +1,164 @@
+       #adToBSSection {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #3c4a73;
+}
+select, input[type="number"], button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+select:focus, input[type="number"]:focus {
+    border-color: #3c4a73;
+}
+button {
+    background-color: #3c4a73;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #5b6e9a;
+    transform: scale(1.05);
+}
+
+.conversion-section {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0; /* Initial opacity for fade-in animation */
+    transform: translateY(20px); /* Initial position for slide-in animation */
+    animation: fadeIn 0.5s forwards, slideIn 0.5s forwards; /* Trigger animations */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.result1, .result2, .error1, .error2 {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.result1, .result2 {
+    background-color: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    color: #00695c;
+    font-size:25px;
+}
+
+.error1, .error2 {
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    color: #c62828;
+}
+@media (min-width: 768px) {
+    body {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    select, input[type="number"], button {
+        width: auto;
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+#conversionType {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#conversionType:hover {
+    background-color: #f0f0f0;
+}
+label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 0.8rem;
+    color: #3c4a73;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.result1, .result2 {
+    animation: pop 0.3s ease-in-out;
+}
+
