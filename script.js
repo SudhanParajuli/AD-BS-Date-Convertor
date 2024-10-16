@@ -1,9 +1,8 @@
-                for (let year = 1914; year <= 2044; year++) {
-                    document.write(`<option value="${year}">${year} AD</option>`);
+for (let year = 1914; year <= 2044; year++) {
+    document.write(`<option value="${year}">${year} AD</option>`);
                 }
-
- for (let year = 1971; year <= 2100; year++) {
-                    document.write(`<option value="${year}">${year} BS</option>`);
+for (let year = 1971; year <= 2100; year++) {
+     document.write(`<option value="${year}">${year} BS</option>`);
                 }
 
 function clearResults() {
