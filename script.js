@@ -47,9 +47,9 @@ function clearResults() {
             const data = await response.json();
 
             if (response.ok) {
-                // Format the AD date as required
+              
                 const formattedADDate = `${data.ad_date.day}, ${getMonthName(data.ad_date.month)} ${data.ad_date.year}`;
-                document.getElementById('result1').textContent = formattedADDate; // Only display the date
+                document.getElementById('result1').textContent = formattedADDate; 
             } else {
                 document.getElementById('error1').textContent = data.error || 'An error occurred.';
             }
@@ -77,7 +77,7 @@ function clearResults() {
             if (response.ok) {
                 // Format the BS date as required
                 const formattedBSDate = `${data.bs_date.day} ${getBSMonthName(data.bs_date.month)} ${data.bs_date.year}`;
-                document.getElementById('result2').textContent = formattedBSDate; // Only display the date
+                document.getElementById('result2').textContent = formattedBSDate;
             } else {
                 document.getElementById('error2').textContent = data.error || 'An error occurred.';
             }
@@ -89,7 +89,7 @@ function clearResults() {
 
     function getMonthName(month) {
         const monthNames = [
-            "", // placeholder for index 0
+            "", 
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         ];
@@ -98,7 +98,7 @@ function clearResults() {
 
     function getBSMonthName(month) {
         const bsMonthNames = [
-            "", // placeholder for index 0
+            "", 
             "Baishak", "Jestha", "Ashadh", "Shrawan", "Bhadra",
             "Ashwin", "Kartik", "Mangsir", "Poush", "Magh", "Falgun", "Chaitra"
         ];
